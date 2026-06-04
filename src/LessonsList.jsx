@@ -1,5 +1,8 @@
+import { useParams } from 'react-router-dom'
 
-export default function LessonsList({ number }) {
+export default function LessonsList() {
+    const {id} = useParams()
+
     let lessons = {
         1 : ['Introducción a HTML'],
         2 : ['Introducción a JS'],
@@ -8,6 +11,6 @@ export default function LessonsList({ number }) {
     }
 
     return (
-        <div>{ lessons[number] }</div>
+        <div>{ lessons[id] }</div>
     )
 }

@@ -8,6 +8,7 @@
     // Se responde al usuario
 
 import { use, useState } from "react"
+import Layout from "./Layout"
 
 // Caso: "nombre"
 // No acepta vacío / Requerido
@@ -57,22 +58,24 @@ export default function RegisterForm() {
     }
 
     return (
-        <form>
-            <button onClick={(e) => {
-                e.preventDefault()
-                setShowPassword(!showPassword)
-            }}>Mostrar</button>
+        <Layout>
+            <form>
+                <button onClick={(e) => {
+                    e.preventDefault()
+                    setShowPassword(!showPassword)
+                }}>Mostrar</button>
 
-            <div className="form-floating my-2">
-                <input className="form-control" type={showPassword ? 'text' : 'password'} onInput={validate} />
-                <label className="form-label">Clave</label>
-                { nameIsValid ? '' : <p className="text-danger">{errorMessage}</p> }
-            </div>
-            
-            <div className="form-floating my-2">
-                <button className="btn btn-primary">Enviar</button>
-            </div>
-        </form>
+                <div className="form-floating my-2">
+                    <input className="form-control" type={showPassword ? 'text' : 'password'} onInput={validate} />
+                    <label className="form-label">Clave</label>
+                    { nameIsValid ? '' : <p className="text-danger">{errorMessage}</p> }
+                </div>
+                
+                <div className="form-floating my-2">
+                    <button className="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </Layout>
     )
 
 }
