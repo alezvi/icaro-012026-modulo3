@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+import PageTitle from "../components/PageTitle";
+import SuperGianteTitle from "../components/SuperGiantTitle";
 import Layout from "../Layout";
-import './HomePage.css'
 
 export default function HomePage() {
     return <Layout>
-        <div className="my-5">
-            <h1 className="HomePage-title">Home</h1>
-        </div>
+        <PageTitle title="Home" />
+
+        <SuperGianteTitle title="Oferta Black Friday!" />
+
+        <Link to="/posts">Posts</Link>
     </Layout>
 }

@@ -1,0 +1,26 @@
+[
+    {
+        "id" : "1",
+        "title" : "Introducción a HTML",
+        "slug" : "introduccion-a-html",
+        "description" : "..."
+    },
+    {
+        "id" : "2",
+        "title" : "Introducción a JS",
+        "slug" : "introduccion-a-js",
+        "description" : "..."
+    },
+    {
+        "id" : "3",
+        "title" : "Introducción a React",
+        "slug" : "introduccion-a-react",
+        "description" : "..."
+    },
+    {
+        "id" : "4",
+        "title" : "Introducción a Backend",
+        "slug" : "introduccion-a-backend",
+        "description" : "..."
+    }
+] 

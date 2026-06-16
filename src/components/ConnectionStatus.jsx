@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './styles/App.css';
+import styles from '../styles/ConnectionStatus.module.css';
 
 export default function ConnectionStatus() {
     const [isOnline, setIsOnline] = useState(true);
@@ -20,7 +20,7 @@ export default function ConnectionStatus() {
     }, []);
 
     return (
-        <div className={'status-' + (isOnline ? 'online' : 'offline')}>
+        <div className={isOnline ? styles.online : styles.offline}>
             <p>{isOnline ? '✅ Estás conectado a internet' : '❌ Sin conexión'}</p>
         </div>
     )

@@ -1,11 +1,11 @@
 
-.status-online {
+.online {
     padding: 24px;
     background-color: green;
     color: white;
 }
 
-.status-offline {
+.offline {
     padding: 24px;
     background-color: red;
     color: white;

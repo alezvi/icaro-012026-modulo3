@@ -1,16 +1,26 @@
-import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function LessonsList() {
-    const {id} = useParams()
+    const [lessons, setLessons] = useState([])
 
-    let lessons = {
-        1 : ['Introducción a HTML'],
-        2 : ['Introducción a JS'],
-        3 : ['Introduccion a React'],
-        4 : ['Introduccion a Cliente y Servidor'],
-    }
+    useEffect(() => {
+        fetch('http://localhost:5174/data/lessons.json')
+            .then(response => response.json())
+            .then(json => setLessons(json))
+    }, [])
 
     return (
-        <div>{ lessons[id] }</div>
+        <div className='col my-5'>
+            { 
+                lessons.map(lesson => {
+                    return <div className='border p-3'>
+                        <Link to={`/lessons/${lesson.slug}`} className='text-decoration-none'>
+                            { lesson.title }
+                        </Link>
+                    </div>
+                }) 
+            }
+        </div>
     )
 }

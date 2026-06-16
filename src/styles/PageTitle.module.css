@@ -1,0 +1,10 @@
+.title {
+    color: violet;
+    letter-spacing: -4px;
+    margin: 2rem 0;
+
+    &:hover {
+        color: blueviolet;
+        cursor: pointer;
+    }
+}
